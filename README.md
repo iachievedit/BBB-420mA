@@ -15,10 +15,14 @@ cd BBB-420mA
 
 ### Install SPI NPM module
 ```make npm```
+
 Yes, I should write a ```package.json``` file.
 
-### Compiling Overlay
+### Compiling and Installing Overlay
 ```make dtbo```
+
+### Loading the Overlay
+```echo BB-SPICAPE-01 > /sys/devices/platform/bone_capemgr/slots```
 
 ### Examples
 ```node outputMilliamp.js 8 # Output 8 mA```
