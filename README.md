@@ -13,6 +13,10 @@ cd BBB-420mA
 ### Node >=0.12 Required!
 ```make node # Installs node4.x on your BeagleBone Black```
 
+### Install SPI NPM module
+```make npm```
+Yes, I should write a ```package.json``` file.
+
 ### Compiling Overlay
 ```make dtbo```
 
