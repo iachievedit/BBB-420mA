@@ -10,6 +10,12 @@
 // OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN 
 // CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+// See http://dev.iachieved.it/iachievedit/adventures-in-beaglebone-black-device-overlays-and-spi/
+// This code assumes you have a mikroBUS cape with:
+//
+// a 4-20mA receiver clickboard in cape slot 1
+// a 4-20mA transmitter clickboard in cape slot 2
+
 var SPI = require('spi')
 
 var milliamps = process.argv[2] || 12
