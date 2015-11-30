@@ -46,13 +46,6 @@
 #address-cells = <1>;
 #size-cells = <1>;
 
-   my_gpio_pins: pinmux_my_gpio_pins {
-	pinctrl-single,pins = <
-	/* the gpio pin(s) */
-	  0x098 0x17    /* P8 10 gpio2_4.spi1_cs2 OUTPUT_PULLUP | MODE7 */
-	>;
-   };
-
     bb_spi0_pins: pinmux_bb_spi0_pins {
 	pinctrl-single,pins = <
 	  0x150 0x30	/* spi0_sclk.spi0_sclk, INPUT_PULLUP | MODE0 */
@@ -69,28 +62,10 @@
 	  0x198 0x13	/* mcasp0_axr0.spi1_d1, OUTPUT_PULLUP | MODE3 */
 	  0x19c 0x13	/* mcasp0_ahclkr.spi1_cs0, OUTPUT_PULLUP | MODE3 */
 	  0x164 0x12	/* eCAP0_in_PWM0_out.spi1_cs1 OUTPUT_PULLUP | MODE2 */
+	  0x098 0x17    /* P8 10 gpio2_4.spi1_cs2 OUTPUT_PULLUP | MODE7 */
 	  >;
       };
 
-    };
-  };
-
-  fragment@1 {
-    target = <&ocp>;
-    __overlay__ {
-      spi1_cs2 {
-      compatible = "gpio-of-helper";
-      status = "okay";
-      pinctrl-names = "default";
-      pinctrl-0 = <>;
-  
-      P8_10 {
-        gpio-name = "spi1_cs2";
-        gpio = <&gpio2 4 0>;
-        output;
-        init-high;
-      };
-    };
     };
   };
 

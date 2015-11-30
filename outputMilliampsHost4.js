@@ -59,15 +59,9 @@ var val = mikro |= 0x3000
 var mbuf = new Buffer(2)
 mbuf.writeUInt16BE(val,0)
 
-fs.writeFile('/sys/class/gpio/gpio68/value', 0, function() {
-  transmitter4.transfer(mbuf, mbuf)
-  fs.writeFile('/sys/class/gpio/gpio68/value', 1, readReceiver)
-})
-
-function readReceiver() {
-  var outbuf = new Buffer(2)
-  receiver1.transfer(outbuf, outbuf)
-  var adc = (outbuf.readUInt16BE() & 0x1fff) >> 1
-  console.log("Input from Receiver:    " + adc)
-  console.log("Millamps:               " + mikroToMilliamps(adc))
-}
+transmitter4.transfer(mbuf, mbuf)
+var outbuf = new Buffer(2)
+receiver1.transfer(outbuf, outbuf)
+var adc = (outbuf.readUInt16BE() & 0x1fff) >> 1
+console.log("Input from Receiver:    " + adc)
+console.log("Millamps:               " + mikroToMilliamps(adc))
