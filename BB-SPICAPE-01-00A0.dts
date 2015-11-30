@@ -108,7 +108,7 @@
 #address-cells = <1>;
 #size-cells = <0>;
 
-      cs-gpios = <0>, <1>, <&gpio2 4 0>;
+      cs-gpios = <0>, <0>, <&gpio2 4 0>;
 
       spi1@0 {
 #address-cells = <1>;

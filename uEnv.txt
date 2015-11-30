@@ -1,0 +1,5 @@
+uname_r=4.3.0-rc7-bone1
+dtb=am335x-boneblack-emmc-overlay.dtb
+cmdline=coherent_pool=1M quiet
+cape_disable=bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
+uuid=4e58663b-26dd-4057-bade-bb30d89e07ad

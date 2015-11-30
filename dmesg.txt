@@ -1,0 +1,633 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.3.0-rc7-bone1 (root@BeagleBoard-X15) (gcc version 4.9.2 (Debian 4.9.2-10) ) #1 Sun Nov 29 20:01:20 UTC 2015
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=50c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: TI AM335x BeagleBone Black
+[    0.000000] cma: Reserved 24 MiB at 0x9e800000
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] On node 0 totalpages: 131072
+[    0.000000] free_area_init_node: node 0, pgdat c0b0a0c0, node_mem_map de36d000
+[    0.000000]   Normal zone: 1152 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 131072 pages, LIFO batch:31
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon )
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 129920
+[    0.000000] Kernel command line: console=ttyO0,115200n8 bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN root=UUID=4e58663b-26dd-4057-bade-bb30d89e07ad ro rootfstype=ext4 rootwait coherent_pool=1M quiet
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 477740K/524288K available (6528K kernel code, 849K rwdata, 3540K rodata, 464K init, 861K bss, 21972K reserved, 24576K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xe0800000 - 0xff000000   ( 488 MB)
+    lowmem  : 0xc0000000 - 0xe0000000   ( 512 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf800000 - 0xbfe00000   (   6 MB)
+      .text : 0xc0008000 - 0xc09dd294   (10069 kB)
+      .init : 0xc09de000 - 0xc0a52000   ( 464 kB)
+      .data : 0xc0a52000 - 0xc0b26498   ( 850 kB)
+       .bss : 0xc0b29000 - 0xc0c00434   ( 862 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000013] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000030] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000041] OMAP clocksource: timer1 at 24000000 Hz
+[    0.000284] Console: colour dummy device 80x30
+[    0.000308] WARNING: Your 'console=ttyO0' has been replaced by 'ttyS0'
+[    0.000313] This ensures that you still see kernel messages. Please
+[    0.000318] update your kernel commandline.
+[    0.000335] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089185] pid_max: default: 32768 minimum: 301
+[    0.089297] Security Framework initialized
+[    0.089308] Yama: becoming mindful.
+[    0.089338] AppArmor: AppArmor disabled by boot time parameter
+[    0.089486] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089495] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090121] Initializing cgroup subsys io
+[    0.090152] Initializing cgroup subsys memory
+[    0.090191] Initializing cgroup subsys devices
+[    0.090205] Initializing cgroup subsys freezer
+[    0.090224] Initializing cgroup subsys net_cls
+[    0.090237] Initializing cgroup subsys perf_event
+[    0.090249] Initializing cgroup subsys net_prio
+[    0.090262] Initializing cgroup subsys pids
+[    0.090308] CPU: Testing write buffer coherency: ok
+[    0.090354] ftrace: allocating 32358 entries in 64 pages
+[    0.169920] Setting up static identity map for 0x800081c0 - 0x8000820c
+[    0.174153] devtmpfs: initialized
+[    0.186524] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.194254] omap_hwmod: tptc0 using broken dt data from edma
+[    0.194352] omap_hwmod: tptc1 using broken dt data from edma
+[    0.194432] omap_hwmod: tptc2 using broken dt data from edma
+[    0.198621] omap_hwmod: debugss: _wait_target_disable failed
+[    0.253036] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.254894] xor: measuring software checksum speed
+[    0.349156]    arm4regs  :  1222.400 MB/sec
+[    0.449155]    8regs     :  1094.800 MB/sec
+[    0.549155]    32regs    :  1154.400 MB/sec
+[    0.649153]    neon      :  1766.800 MB/sec
+[    0.649160] xor: using function: neon (1766.800 MB/sec)
+[    0.649312] pinctrl core: initialized pinctrl subsystem
+[    0.649666] reg-dummy reg-dummy: no of_node; not parsing pinctrl DT
+[    0.650942] NET: Registered protocol family 16
+[    0.653901] DMA: preallocated 1024 KiB pool for atomic coherent allocations
+[    0.657868] gpiochip_add: registered GPIOs 0 to 31 on device: gpio
+[    0.658010] OMAP GPIO hardware version 0.1
+[    0.658643] gpiochip_add: registered GPIOs 32 to 63 on device: gpio
+[    0.659147] gpiochip_add: registered GPIOs 64 to 95 on device: gpio
+[    0.659728] gpiochip_add: registered GPIOs 96 to 127 on device: gpio
+[    0.664895] No ATAGs?
+[    0.664920] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.839239] raid6: int32x1  gen()   272 MB/s
+[    1.009275] raid6: int32x1  xor()   240 MB/s
+[    1.179250] raid6: int32x2  gen()   356 MB/s
+[    1.349187] raid6: int32x2  xor()   269 MB/s
+[    1.519173] raid6: int32x4  gen()   405 MB/s
+[    1.689235] raid6: int32x4  xor()   259 MB/s
+[    1.859155] raid6: int32x8  gen()   359 MB/s
+[    2.029280] raid6: int32x8  xor()   232 MB/s
+[    2.199169] raid6: neonx1   gen()  1458 MB/s
+[    2.369153] raid6: neonx1   xor()   848 MB/s
+[    2.539175] raid6: neonx2   gen()  1884 MB/s
+[    2.709159] raid6: neonx2   xor()  1174 MB/s
+[    2.879174] raid6: neonx4   gen()  1977 MB/s
+[    3.049154] raid6: neonx4   xor()  1207 MB/s
+[    3.219215] raid6: neonx8   gen()   670 MB/s
+[    3.389185] raid6: neonx8   xor()   855 MB/s
+[    3.389191] raid6: using algorithm neonx4 gen() 1977 MB/s
+[    3.389197] raid6: .... xor() 1207 MB/s, rmw enabled
+[    3.389202] raid6: using intx1 recovery algorithm
+[    3.390195] edma-dma-engine edma-dma-engine.0: no of_node; not parsing pinctrl DT
+[    3.395765] edma-dma-engine edma-dma-engine.0: TI EDMA DMA engine driver
+[    3.395984] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/fixedregulator@0[0]'
+[    3.399503] SCSI subsystem initialized
+[    3.399773] libata version 3.00 loaded.
+[    3.400051] usbcore: registered new interface driver usbfs
+[    3.400115] usbcore: registered new interface driver hub
+[    3.400184] usbcore: registered new device driver usb
+[    3.400618] omap_i2c 44e0b000.i2c: could not find pctldev for node /ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_i2c0_pins, deferring probe
+[    3.400659] omap_i2c 4819c000.i2c: could not find pctldev for node /ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_i2c2_pins, deferring probe
+[    3.400742] media: Linux media interface: v0.10
+[    3.400792] Linux video capture interface: v2.00
+[    3.400880] pps_core: LinuxPPS API ver. 1 registered
+[    3.400886] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    3.400911] PTP clock support registered
+[    3.401435] omap-mailbox 480c8000.mailbox: omap mailbox rev 0x400
+[    3.402415] NetLabel: Initializing
+[    3.402425] NetLabel:  domain hash size = 128
+[    3.402430] NetLabel:  protocols = UNLABELED CIPSOv4
+[    3.402486] NetLabel:  unlabeled traffic allowed by default
+[    3.403006] clocksource: Switched to clocksource timer1
+[    3.480328] NET: Registered protocol family 2
+[    3.480991] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    3.481034] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    3.481071] TCP: Hash tables configured (established 4096 bind 4096)
+[    3.481135] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    3.481151] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    3.481305] NET: Registered protocol family 1
+[    3.481712] RPC: Registered named UNIX socket transport module.
+[    3.481722] RPC: Registered udp transport module.
+[    3.481727] RPC: Registered tcp transport module.
+[    3.481732] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    3.482181] Unpacking initramfs...
+[    3.765718] Freeing initrd memory: 4360K (cfbbe000 - d0000000)
+[    3.766316] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    3.768028] alarmtimer alarmtimer: no of_node; not parsing pinctrl DT
+[    3.768271] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    3.768354] audit: initializing netlink subsys (disabled)
+[    3.768432] audit: type=2000 audit(3.700:1): initialized
+[    3.769324] zbud: loaded
+[    3.769555] VFS: Disk quotas dquot_6.6.0
+[    3.769610] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    3.770104] NFS: Registering the id_resolver key type
+[    3.770163] Key type id_resolver registered
+[    3.770170] Key type id_legacy registered
+[    3.770194] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    3.770443] fuse init (API version 7.23)
+[    3.770635] SGI XFS with ACLs, security attributes, realtime, no debug enabled
+[    3.774884] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    3.775040] io scheduler noop registered
+[    3.775053] io scheduler deadline registered
+[    3.775092] io scheduler cfq registered (default)
+[    3.775875] pinctrl-single 44e10800.pinmux: allocating 142 pins
+[    3.776008] pinctrl-single 44e10800.pinmux: try to register 142 pins ...
+[    3.776020] pinctrl core: registered pin 0 (44e10800.0) on pinctrl-single
+[    3.776030] pinctrl core: registered pin 1 (44e10804.0) on pinctrl-single
+[    3.776037] pinctrl core: registered pin 2 (44e10808.0) on pinctrl-single
+[    3.776044] pinctrl core: registered pin 3 (44e1080c.0) on pinctrl-single
+[    3.776051] pinctrl core: registered pin 4 (44e10810.0) on pinctrl-single
+[    3.776058] pinctrl core: registered pin 5 (44e10814.0) on pinctrl-single
+[    3.776065] pinctrl core: registered pin 6 (44e10818.0) on pinctrl-single
+[    3.776071] pinctrl core: registered pin 7 (44e1081c.0) on pinctrl-single
+[    3.776078] pinctrl core: registered pin 8 (44e10820.0) on pinctrl-single
+[    3.776085] pinctrl core: registered pin 9 (44e10824.0) on pinctrl-single
+[    3.776092] pinctrl core: registered pin 10 (44e10828.0) on pinctrl-single
+[    3.776099] pinctrl core: registered pin 11 (44e1082c.0) on pinctrl-single
+[    3.776106] pinctrl core: registered pin 12 (44e10830.0) on pinctrl-single
+[    3.776113] pinctrl core: registered pin 13 (44e10834.0) on pinctrl-single
+[    3.776120] pinctrl core: registered pin 14 (44e10838.0) on pinctrl-single
+[    3.776126] pinctrl core: registered pin 15 (44e1083c.0) on pinctrl-single
+[    3.776134] pinctrl core: registered pin 16 (44e10840.0) on pinctrl-single
+[    3.776140] pinctrl core: registered pin 17 (44e10844.0) on pinctrl-single
+[    3.776147] pinctrl core: registered pin 18 (44e10848.0) on pinctrl-single
+[    3.776154] pinctrl core: registered pin 19 (44e1084c.0) on pinctrl-single
+[    3.776161] pinctrl core: registered pin 20 (44e10850.0) on pinctrl-single
+[    3.776168] pinctrl core: registered pin 21 (44e10854.0) on pinctrl-single
+[    3.776175] pinctrl core: registered pin 22 (44e10858.0) on pinctrl-single
+[    3.776182] pinctrl core: registered pin 23 (44e1085c.0) on pinctrl-single
+[    3.776188] pinctrl core: registered pin 24 (44e10860.0) on pinctrl-single
+[    3.776195] pinctrl core: registered pin 25 (44e10864.0) on pinctrl-single
+[    3.776202] pinctrl core: registered pin 26 (44e10868.0) on pinctrl-single
+[    3.776209] pinctrl core: registered pin 27 (44e1086c.0) on pinctrl-single
+[    3.776216] pinctrl core: registered pin 28 (44e10870.0) on pinctrl-single
+[    3.776223] pinctrl core: registered pin 29 (44e10874.0) on pinctrl-single
+[    3.776230] pinctrl core: registered pin 30 (44e10878.0) on pinctrl-single
+[    3.776237] pinctrl core: registered pin 31 (44e1087c.0) on pinctrl-single
+[    3.776243] pinctrl core: registered pin 32 (44e10880.0) on pinctrl-single
+[    3.776251] pinctrl core: registered pin 33 (44e10884.0) on pinctrl-single
+[    3.776257] pinctrl core: registered pin 34 (44e10888.0) on pinctrl-single
+[    3.776264] pinctrl core: registered pin 35 (44e1088c.0) on pinctrl-single
+[    3.776272] pinctrl core: registered pin 36 (44e10890.0) on pinctrl-single
+[    3.776279] pinctrl core: registered pin 37 (44e10894.0) on pinctrl-single
+[    3.776285] pinctrl core: registered pin 38 (44e10898.0) on pinctrl-single
+[    3.776296] pinctrl core: registered pin 39 (44e1089c.0) on pinctrl-single
+[    3.776303] pinctrl core: registered pin 40 (44e108a0.0) on pinctrl-single
+[    3.776310] pinctrl core: registered pin 41 (44e108a4.0) on pinctrl-single
+[    3.776317] pinctrl core: registered pin 42 (44e108a8.0) on pinctrl-single
+[    3.776323] pinctrl core: registered pin 43 (44e108ac.0) on pinctrl-single
+[    3.776330] pinctrl core: registered pin 44 (44e108b0.0) on pinctrl-single
+[    3.776337] pinctrl core: registered pin 45 (44e108b4.0) on pinctrl-single
+[    3.776344] pinctrl core: registered pin 46 (44e108b8.0) on pinctrl-single
+[    3.776351] pinctrl core: registered pin 47 (44e108bc.0) on pinctrl-single
+[    3.776358] pinctrl core: registered pin 48 (44e108c0.0) on pinctrl-single
+[    3.776364] pinctrl core: registered pin 49 (44e108c4.0) on pinctrl-single
+[    3.776371] pinctrl core: registered pin 50 (44e108c8.0) on pinctrl-single
+[    3.776378] pinctrl core: registered pin 51 (44e108cc.0) on pinctrl-single
+[    3.776385] pinctrl core: registered pin 52 (44e108d0.0) on pinctrl-single
+[    3.776392] pinctrl core: registered pin 53 (44e108d4.0) on pinctrl-single
+[    3.776398] pinctrl core: registered pin 54 (44e108d8.0) on pinctrl-single
+[    3.776405] pinctrl core: registered pin 55 (44e108dc.0) on pinctrl-single
+[    3.776412] pinctrl core: registered pin 56 (44e108e0.0) on pinctrl-single
+[    3.776419] pinctrl core: registered pin 57 (44e108e4.0) on pinctrl-single
+[    3.776426] pinctrl core: registered pin 58 (44e108e8.0) on pinctrl-single
+[    3.776433] pinctrl core: registered pin 59 (44e108ec.0) on pinctrl-single
+[    3.776440] pinctrl core: registered pin 60 (44e108f0.0) on pinctrl-single
+[    3.776447] pinctrl core: registered pin 61 (44e108f4.0) on pinctrl-single
+[    3.776454] pinctrl core: registered pin 62 (44e108f8.0) on pinctrl-single
+[    3.776461] pinctrl core: registered pin 63 (44e108fc.0) on pinctrl-single
+[    3.776469] pinctrl core: registered pin 64 (44e10900.0) on pinctrl-single
+[    3.776476] pinctrl core: registered pin 65 (44e10904.0) on pinctrl-single
+[    3.776483] pinctrl core: registered pin 66 (44e10908.0) on pinctrl-single
+[    3.776490] pinctrl core: registered pin 67 (44e1090c.0) on pinctrl-single
+[    3.776497] pinctrl core: registered pin 68 (44e10910.0) on pinctrl-single
+[    3.776504] pinctrl core: registered pin 69 (44e10914.0) on pinctrl-single
+[    3.776510] pinctrl core: registered pin 70 (44e10918.0) on pinctrl-single
+[    3.776517] pinctrl core: registered pin 71 (44e1091c.0) on pinctrl-single
+[    3.776524] pinctrl core: registered pin 72 (44e10920.0) on pinctrl-single
+[    3.776531] pinctrl core: registered pin 73 (44e10924.0) on pinctrl-single
+[    3.776538] pinctrl core: registered pin 74 (44e10928.0) on pinctrl-single
+[    3.776545] pinctrl core: registered pin 75 (44e1092c.0) on pinctrl-single
+[    3.776552] pinctrl core: registered pin 76 (44e10930.0) on pinctrl-single
+[    3.776558] pinctrl core: registered pin 77 (44e10934.0) on pinctrl-single
+[    3.776565] pinctrl core: registered pin 78 (44e10938.0) on pinctrl-single
+[    3.776572] pinctrl core: registered pin 79 (44e1093c.0) on pinctrl-single
+[    3.776579] pinctrl core: registered pin 80 (44e10940.0) on pinctrl-single
+[    3.776586] pinctrl core: registered pin 81 (44e10944.0) on pinctrl-single
+[    3.776593] pinctrl core: registered pin 82 (44e10948.0) on pinctrl-single
+[    3.776600] pinctrl core: registered pin 83 (44e1094c.0) on pinctrl-single
+[    3.776607] pinctrl core: registered pin 84 (44e10950.0) on pinctrl-single
+[    3.776614] pinctrl core: registered pin 85 (44e10954.0) on pinctrl-single
+[    3.776621] pinctrl core: registered pin 86 (44e10958.0) on pinctrl-single
+[    3.776627] pinctrl core: registered pin 87 (44e1095c.0) on pinctrl-single
+[    3.776635] pinctrl core: registered pin 88 (44e10960.0) on pinctrl-single
+[    3.776642] pinctrl core: registered pin 89 (44e10964.0) on pinctrl-single
+[    3.776648] pinctrl core: registered pin 90 (44e10968.0) on pinctrl-single
+[    3.776655] pinctrl core: registered pin 91 (44e1096c.0) on pinctrl-single
+[    3.776662] pinctrl core: registered pin 92 (44e10970.0) on pinctrl-single
+[    3.776669] pinctrl core: registered pin 93 (44e10974.0) on pinctrl-single
+[    3.776676] pinctrl core: registered pin 94 (44e10978.0) on pinctrl-single
+[    3.776683] pinctrl core: registered pin 95 (44e1097c.0) on pinctrl-single
+[    3.776690] pinctrl core: registered pin 96 (44e10980.0) on pinctrl-single
+[    3.776697] pinctrl core: registered pin 97 (44e10984.0) on pinctrl-single
+[    3.776704] pinctrl core: registered pin 98 (44e10988.0) on pinctrl-single
+[    3.776711] pinctrl core: registered pin 99 (44e1098c.0) on pinctrl-single
+[    3.776718] pinctrl core: registered pin 100 (44e10990.0) on pinctrl-single
+[    3.776725] pinctrl core: registered pin 101 (44e10994.0) on pinctrl-single
+[    3.776736] pinctrl core: registered pin 102 (44e10998.0) on pinctrl-single
+[    3.776743] pinctrl core: registered pin 103 (44e1099c.0) on pinctrl-single
+[    3.776750] pinctrl core: registered pin 104 (44e109a0.0) on pinctrl-single
+[    3.776757] pinctrl core: registered pin 105 (44e109a4.0) on pinctrl-single
+[    3.776763] pinctrl core: registered pin 106 (44e109a8.0) on pinctrl-single
+[    3.776770] pinctrl core: registered pin 107 (44e109ac.0) on pinctrl-single
+[    3.776777] pinctrl core: registered pin 108 (44e109b0.0) on pinctrl-single
+[    3.776784] pinctrl core: registered pin 109 (44e109b4.0) on pinctrl-single
+[    3.776791] pinctrl core: registered pin 110 (44e109b8.0) on pinctrl-single
+[    3.776798] pinctrl core: registered pin 111 (44e109bc.0) on pinctrl-single
+[    3.776805] pinctrl core: registered pin 112 (44e109c0.0) on pinctrl-single
+[    3.776811] pinctrl core: registered pin 113 (44e109c4.0) on pinctrl-single
+[    3.776818] pinctrl core: registered pin 114 (44e109c8.0) on pinctrl-single
+[    3.776825] pinctrl core: registered pin 115 (44e109cc.0) on pinctrl-single
+[    3.776832] pinctrl core: registered pin 116 (44e109d0.0) on pinctrl-single
+[    3.776839] pinctrl core: registered pin 117 (44e109d4.0) on pinctrl-single
+[    3.776846] pinctrl core: registered pin 118 (44e109d8.0) on pinctrl-single
+[    3.776853] pinctrl core: registered pin 119 (44e109dc.0) on pinctrl-single
+[    3.776860] pinctrl core: registered pin 120 (44e109e0.0) on pinctrl-single
+[    3.776867] pinctrl core: registered pin 121 (44e109e4.0) on pinctrl-single
+[    3.776873] pinctrl core: registered pin 122 (44e109e8.0) on pinctrl-single
+[    3.776880] pinctrl core: registered pin 123 (44e109ec.0) on pinctrl-single
+[    3.776887] pinctrl core: registered pin 124 (44e109f0.0) on pinctrl-single
+[    3.776894] pinctrl core: registered pin 125 (44e109f4.0) on pinctrl-single
+[    3.776901] pinctrl core: registered pin 126 (44e109f8.0) on pinctrl-single
+[    3.776908] pinctrl core: registered pin 127 (44e109fc.0) on pinctrl-single
+[    3.776916] pinctrl core: registered pin 128 (44e10a00.0) on pinctrl-single
+[    3.776923] pinctrl core: registered pin 129 (44e10a04.0) on pinctrl-single
+[    3.776929] pinctrl core: registered pin 130 (44e10a08.0) on pinctrl-single
+[    3.776936] pinctrl core: registered pin 131 (44e10a0c.0) on pinctrl-single
+[    3.776943] pinctrl core: registered pin 132 (44e10a10.0) on pinctrl-single
+[    3.776950] pinctrl core: registered pin 133 (44e10a14.0) on pinctrl-single
+[    3.776957] pinctrl core: registered pin 134 (44e10a18.0) on pinctrl-single
+[    3.776964] pinctrl core: registered pin 135 (44e10a1c.0) on pinctrl-single
+[    3.776971] pinctrl core: registered pin 136 (44e10a20.0) on pinctrl-single
+[    3.776978] pinctrl core: registered pin 137 (44e10a24.0) on pinctrl-single
+[    3.776985] pinctrl core: registered pin 138 (44e10a28.0) on pinctrl-single
+[    3.776991] pinctrl core: registered pin 139 (44e10a2c.0) on pinctrl-single
+[    3.776998] pinctrl core: registered pin 140 (44e10a30.0) on pinctrl-single
+[    3.777005] pinctrl core: registered pin 141 (44e10a34.0) on pinctrl-single
+[    3.777037] pinctrl core: add 1 pinctrl maps
+[    3.777059] pinctrl-single 44e10800.pinmux: found group selector 0 for pinmux_clkout2_pin
+[    3.777075] pinctrl-single 44e10800.pinmux: request pin 109 (44e109b4.0) for 44e10800.pinmux
+[    3.777086] pinctrl-single 44e10800.pinmux: enabling pinmux_clkout2_pin function0
+[    3.777097] pinctrl-single 44e10800.pinmux: failed to lookup the sleep state
+[    3.777157] pinctrl-single 44e10800.pinmux: 142 pins at pa f9e10800 size 568
+[    3.778666] Serial: 8250/16550 driver, 6 ports, IRQ sharing disabled
+[    3.780193] serial8250 serial8250: no of_node; not parsing pinctrl DT
+[    3.780478] pinctrl core: add 1 pinctrl maps
+[    3.780501] pinctrl-single 44e10800.pinmux: found group selector 1 for pinmux_uart0_pins
+[    3.780516] pinctrl-single 44e10800.pinmux: request pin 92 (44e10970.0) for 44e09000.serial
+[    3.780527] pinctrl-single 44e10800.pinmux: request pin 93 (44e10974.0) for 44e09000.serial
+[    3.780537] pinctrl-single 44e10800.pinmux: enabling pinmux_uart0_pins function1
+[    3.780943] 44e09000.serial: ttyS0 at MMIO 0x44e09000 (irq = 155, base_baud = 3000000) is a 8250
+[    3.781758] console [ttyS0] enabled
+[    3.782764] [drm] Initialized drm 1.1.0 20060810
+[    3.783874] usbcore: registered new interface driver dln2
+[    3.785913] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.785940] ehci-platform: EHCI generic platform driver
+[    3.786057] ehci-omap: OMAP-EHCI Host Controller driver
+[    3.786209] usbcore: registered new interface driver usb-storage
+[    3.787473] am335x-phy-driver 47401300.usb-phy: GPIO lookup for consumer reset
+[    3.787489] am335x-phy-driver 47401300.usb-phy: using device tree for GPIO lookup
+[    3.787503] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/ocp/usb@47400000/usb-phy@47401300[0]'
+[    3.787512] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/ocp/usb@47400000/usb-phy@47401300[0]'
+[    3.787522] am335x-phy-driver 47401300.usb-phy: using lookup tables for GPIO lookup
+[    3.787532] am335x-phy-driver 47401300.usb-phy: lookup for GPIO reset failed
+[    3.787542] am335x-phy-driver 47401300.usb-phy: GPIO lookup for consumer vbus-detect
+[    3.787550] am335x-phy-driver 47401300.usb-phy: using device tree for GPIO lookup
+[    3.787559] of_get_named_gpiod_flags: can't parse 'vbus-detect-gpios' property of node '/ocp/usb@47400000/usb-phy@47401300[0]'
+[    3.787568] of_get_named_gpiod_flags: can't parse 'vbus-detect-gpio' property of node '/ocp/usb@47400000/usb-phy@47401300[0]'
+[    3.787576] am335x-phy-driver 47401300.usb-phy: using lookup tables for GPIO lookup
+[    3.787585] am335x-phy-driver 47401300.usb-phy: lookup for GPIO vbus-detect failed
+[    3.787635] 47401300.usb-phy supply vcc not found, using dummy regulator
+[    3.788453] musb-hdrc musb-hdrc.0.auto: no of_node; not parsing pinctrl DT
+[    3.789598] musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    3.789608] musb-hdrc: MHDRC RTL version 2.0 
+[    3.789614] musb-hdrc: setup fifo_mode 4
+[    3.789631] musb-hdrc: 28/31 max ep, 16384/16384 memory
+[    3.790494] am335x-phy-driver 47401b00.usb-phy: GPIO lookup for consumer reset
+[    3.790508] am335x-phy-driver 47401b00.usb-phy: using device tree for GPIO lookup
+[    3.790520] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/ocp/usb@47400000/usb-phy@47401b00[0]'
+[    3.790530] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/ocp/usb@47400000/usb-phy@47401b00[0]'
+[    3.790538] am335x-phy-driver 47401b00.usb-phy: using lookup tables for GPIO lookup
+[    3.790548] am335x-phy-driver 47401b00.usb-phy: lookup for GPIO reset failed
+[    3.790557] am335x-phy-driver 47401b00.usb-phy: GPIO lookup for consumer vbus-detect
+[    3.790566] am335x-phy-driver 47401b00.usb-phy: using device tree for GPIO lookup
+[    3.790575] of_get_named_gpiod_flags: can't parse 'vbus-detect-gpios' property of node '/ocp/usb@47400000/usb-phy@47401b00[0]'
+[    3.790584] of_get_named_gpiod_flags: can't parse 'vbus-detect-gpio' property of node '/ocp/usb@47400000/usb-phy@47401b00[0]'
+[    3.790592] am335x-phy-driver 47401b00.usb-phy: using lookup tables for GPIO lookup
+[    3.790600] am335x-phy-driver 47401b00.usb-phy: lookup for GPIO vbus-detect failed
+[    3.790634] 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    3.791286] musb-hdrc musb-hdrc.1.auto: no of_node; not parsing pinctrl DT
+[    3.792420] musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    3.792431] musb-hdrc: MHDRC RTL version 2.0 
+[    3.792437] musb-hdrc: setup fifo_mode 4
+[    3.792450] musb-hdrc: 28/31 max ep, 16384/16384 memory
+[    3.792540] musb-hdrc musb-hdrc.1.auto: MUSB HDRC host driver
+[    3.792775] musb-hdrc musb-hdrc.1.auto: new USB bus registered, assigned bus number 1
+[    3.792940] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.792952] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.792961] usb usb1: Product: MUSB HDRC host driver
+[    3.792968] usb usb1: Manufacturer: Linux 4.3.0-rc7-bone1 musb-hcd
+[    3.792977] usb usb1: SerialNumber: musb-hdrc.1.auto
+[    3.793437] usb usb1: no of_node; not parsing pinctrl DT
+[    3.793613] hub 1-0:1.0: no of_node; not parsing pinctrl DT
+[    3.793644] hub 1-0:1.0: USB hub found
+[    3.793677] hub 1-0:1.0: 1 port detected
+[    3.801576] mousedev: PS/2 mouse device common for all mice
+[    3.802778] omap_rtc 44e3e000.rtc: already running
+[    3.803175] omap_rtc 44e3e000.rtc: rtc core: registered 44e3e000.rtc as rtc0
+[    3.803651] i2c /dev entries driver
+[    3.805352] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    3.805715] sdhci: Secure Digital Host Controller Interface driver
+[    3.805722] sdhci: Copyright(c) Pierre Ossman
+[    3.805935] pinctrl core: add 1 pinctrl maps
+[    3.805964] pinctrl-single 44e10800.pinmux: found group selector 2 for pinmux_mmc1_pins
+[    3.805981] pinctrl-single 44e10800.pinmux: request pin 88 (44e10960.0) for 48060000.mmc
+[    3.805992] pinctrl-single 44e10800.pinmux: enabling pinmux_mmc1_pins function2
+[    3.806086] omap_hsmmc 48060000.mmc: GPIO lookup for consumer cd
+[    3.806097] omap_hsmmc 48060000.mmc: using device tree for GPIO lookup
+[    3.806121] of_get_named_gpiod_flags: parsed 'cd-gpios' property of node '/ocp/mmc@48060000[0]' - status (0)
+[    3.806164] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    3.806176] omap_hsmmc 48060000.mmc: GPIO lookup for consumer wp
+[    3.806184] omap_hsmmc 48060000.mmc: using device tree for GPIO lookup
+[    3.806193] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/ocp/mmc@48060000[0]'
+[    3.806202] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/ocp/mmc@48060000[0]'
+[    3.806211] omap_hsmmc 48060000.mmc: using lookup tables for GPIO lookup
+[    3.806221] omap_hsmmc 48060000.mmc: lookup for GPIO wp failed
+[    3.843392] pinctrl core: add 1 pinctrl maps
+[    3.843424] pinctrl-single 44e10800.pinmux: found group selector 3 for pinmux_emmc_pins
+[    3.843440] pinctrl-single 44e10800.pinmux: request pin 32 (44e10880.0) for 481d8000.mmc
+[    3.843451] pinctrl-single 44e10800.pinmux: request pin 33 (44e10884.0) for 481d8000.mmc
+[    3.843460] pinctrl-single 44e10800.pinmux: request pin 0 (44e10800.0) for 481d8000.mmc
+[    3.843470] pinctrl-single 44e10800.pinmux: request pin 1 (44e10804.0) for 481d8000.mmc
+[    3.843479] pinctrl-single 44e10800.pinmux: request pin 2 (44e10808.0) for 481d8000.mmc
+[    3.843488] pinctrl-single 44e10800.pinmux: request pin 3 (44e1080c.0) for 481d8000.mmc
+[    3.843498] pinctrl-single 44e10800.pinmux: request pin 4 (44e10810.0) for 481d8000.mmc
+[    3.843507] pinctrl-single 44e10800.pinmux: request pin 5 (44e10814.0) for 481d8000.mmc
+[    3.843516] pinctrl-single 44e10800.pinmux: request pin 6 (44e10818.0) for 481d8000.mmc
+[    3.843525] pinctrl-single 44e10800.pinmux: request pin 7 (44e1081c.0) for 481d8000.mmc
+[    3.843535] pinctrl-single 44e10800.pinmux: enabling pinmux_emmc_pins function3
+[    3.843635] omap_hsmmc 481d8000.mmc: GPIO lookup for consumer cd
+[    3.843645] omap_hsmmc 481d8000.mmc: using device tree for GPIO lookup
+[    3.843657] of_get_named_gpiod_flags: can't parse 'cd-gpios' property of node '/ocp/mmc@481d8000[0]'
+[    3.843666] of_get_named_gpiod_flags: can't parse 'cd-gpio' property of node '/ocp/mmc@481d8000[0]'
+[    3.843674] omap_hsmmc 481d8000.mmc: using lookup tables for GPIO lookup
+[    3.843683] omap_hsmmc 481d8000.mmc: lookup for GPIO cd failed
+[    3.843693] omap_hsmmc 481d8000.mmc: GPIO lookup for consumer wp
+[    3.843700] omap_hsmmc 481d8000.mmc: using device tree for GPIO lookup
+[    3.843709] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/ocp/mmc@481d8000[0]'
+[    3.843717] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/ocp/mmc@481d8000[0]'
+[    3.843725] omap_hsmmc 481d8000.mmc: using lookup tables for GPIO lookup
+[    3.843732] omap_hsmmc 481d8000.mmc: lookup for GPIO wp failed
+[    3.883196] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.883243] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.883331] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.884265] usbcore: registered new interface driver usbhid
+[    3.884274] usbhid: USB HID core driver
+[    3.884491] ashmem: initialized
+[    3.885028]  remoteproc0: wkup_m3 is available
+[    3.885039]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    3.885046]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    3.886421] oprofile-perf oprofile-perf.0: no of_node; not parsing pinctrl DT
+[    3.886467] oprofile: using arm/armv7
+[    3.886944] NET: Registered protocol family 10
+[    3.890818] mip6: Mobile IPv6
+[    3.890843] NET: Registered protocol family 17
+[    3.890952] Key type dns_resolver registered
+[    3.890965] mpls_gso: MPLS GSO support
+[    3.891275] omap_voltage_late_init: Voltage driver support not added
+[    3.898158] cpufreq-voltdm cpufreq-voltdm.0: no of_node; not parsing pinctrl DT
+[    3.898353] cpu cpu0: of_pm_voltdm_notifier_register: Failed to get cpu0 regulator/voltdm: -517
+[    3.898368] cpu cpu0: cpu0 clock notifier not ready, retry
+[    3.904155] ThumbEE CPU extension supported.
+[    3.904179] Registering SWP/SWPB emulation handler
+[    3.905099] registered taskstats version 1
+[    3.905243] zswap: loaded using pool lzo/zbud
+[    3.906139] Btrfs loaded
+[    3.926861] Key type encrypted registered
+[    3.927375] pinctrl core: add 1 pinctrl maps
+[    3.927416] pinctrl-single 44e10800.pinmux: found group selector 4 for pinmux_i2c0_pins
+[    3.927434] pinctrl-single 44e10800.pinmux: request pin 98 (44e10988.0) for 44e0b000.i2c
+[    3.927445] pinctrl-single 44e10800.pinmux: request pin 99 (44e1098c.0) for 44e0b000.i2c
+[    3.927456] pinctrl-single 44e10800.pinmux: enabling pinmux_i2c0_pins function4
+[    3.928511] tps65217-pmic tps65217-pmic: no of_node; not parsing pinctrl DT
+[    3.947014] mmc1: MAN_BKOPS_EN bit is not set
+[    3.949205] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    3.949612] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.949646] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    3.949860] pinctrl core: add 1 pinctrl maps
+[    3.949891] pinctrl-single 44e10800.pinmux: found group selector 5 for pinmux_i2c2_pins
+[    3.949907] pinctrl-single 44e10800.pinmux: request pin 94 (44e10978.0) for 4819c000.i2c
+[    3.949918] pinctrl-single 44e10800.pinmux: request pin 95 (44e1097c.0) for 4819c000.i2c
+[    3.949928] pinctrl-single 44e10800.pinmux: enabling pinmux_i2c2_pins function5
+[    3.950765] mmc1: new high speed MMC card at address 0001
+[    3.950963] mmcblk mmc1:0001: no of_node; not parsing pinctrl DT
+[    3.951436] at24 2-0054: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.951726] at24 2-0055: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.951994] at24 2-0056: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.952277] at24 2-0057: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.952305] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    3.953070] mmcblk0: mmc1:0001 MMC04G 3.65 GiB 
+[    3.953349] mmcblk0boot0: mmc1:0001 MMC04G partition 1 1.00 MiB
+[    3.953594] mmcblk0boot1: mmc1:0001 MMC04G partition 2 1.00 MiB
+[    3.955598]  mmcblk0: p1 p2
+[    3.958960] bone_capemgr bone_capemgr: Baseboard: 'A335BNLT,000C,2914BBBK1443'
+[    3.958989] bone_capemgr bone_capemgr: compatible-baseboard=ti,beaglebone-black - #slots=4
+[    3.996966] bone_capemgr bone_capemgr: Invalid signature 'ffffffff' at slot 0
+[    4.004155] bone_capemgr bone_capemgr: slot #0: No cape found
+[    4.033893] bone_capemgr bone_capemgr: Invalid signature 'ffffffff' at slot 1
+[    4.041059] bone_capemgr bone_capemgr: slot #1: No cape found
+[    4.070794] bone_capemgr bone_capemgr: Invalid signature 'ffffffff' at slot 2
+[    4.077972] bone_capemgr bone_capemgr: slot #2: No cape found
+[    4.107720] bone_capemgr bone_capemgr: Invalid signature 'ffffffff' at slot 3
+[    4.114898] bone_capemgr bone_capemgr: slot #3: No cape found
+[    4.120736] bone_capemgr bone_capemgr: initialized OK.
+[    4.120903] cpufreq-voltdm cpufreq-voltdm.0: no of_node; not parsing pinctrl DT
+[    4.121223] cpu cpu0: of_pm_voltdm_notifier_register: Fail calculating voltage latency[950000<->1325000]:-22
+[    4.121586] cpu cpu0: of_pm_voltdm_notifier_register: Fail calculating voltage latency[950000<->1325000]:-22
+[    4.121957] pinctrl core: add 1 pinctrl maps
+[    4.121985] pinctrl core: add 1 pinctrl maps
+[    4.122013] pinctrl-single 44e10800.pinmux: found group selector 6 for cpsw_default
+[    4.122027] pinctrl-single 44e10800.pinmux: found group selector 7 for cpsw_sleep
+[    4.122043] pinctrl-single 44e10800.pinmux: request pin 66 (44e10908.0) for 4a100000.ethernet
+[    4.122054] pinctrl-single 44e10800.pinmux: request pin 67 (44e1090c.0) for 4a100000.ethernet
+[    4.122063] pinctrl-single 44e10800.pinmux: request pin 68 (44e10910.0) for 4a100000.ethernet
+[    4.122073] pinctrl-single 44e10800.pinmux: request pin 69 (44e10914.0) for 4a100000.ethernet
+[    4.122082] pinctrl-single 44e10800.pinmux: request pin 70 (44e10918.0) for 4a100000.ethernet
+[    4.122092] pinctrl-single 44e10800.pinmux: request pin 71 (44e1091c.0) for 4a100000.ethernet
+[    4.122101] pinctrl-single 44e10800.pinmux: request pin 72 (44e10920.0) for 4a100000.ethernet
+[    4.122110] pinctrl-single 44e10800.pinmux: request pin 73 (44e10924.0) for 4a100000.ethernet
+[    4.122120] pinctrl-single 44e10800.pinmux: request pin 74 (44e10928.0) for 4a100000.ethernet
+[    4.122129] pinctrl-single 44e10800.pinmux: request pin 75 (44e1092c.0) for 4a100000.ethernet
+[    4.122138] pinctrl-single 44e10800.pinmux: request pin 76 (44e10930.0) for 4a100000.ethernet
+[    4.122148] pinctrl-single 44e10800.pinmux: request pin 77 (44e10934.0) for 4a100000.ethernet
+[    4.122157] pinctrl-single 44e10800.pinmux: request pin 78 (44e10938.0) for 4a100000.ethernet
+[    4.122166] pinctrl-single 44e10800.pinmux: request pin 79 (44e1093c.0) for 4a100000.ethernet
+[    4.122175] pinctrl-single 44e10800.pinmux: request pin 80 (44e10940.0) for 4a100000.ethernet
+[    4.122187] pinctrl-single 44e10800.pinmux: enabling cpsw_default function6
+[    4.136117] pinctrl core: add 1 pinctrl maps
+[    4.136143] pinctrl core: add 1 pinctrl maps
+[    4.136169] pinctrl-single 44e10800.pinmux: found group selector 8 for davinci_mdio_default
+[    4.136182] pinctrl-single 44e10800.pinmux: found group selector 9 for davinci_mdio_sleep
+[    4.136194] pinctrl-single 44e10800.pinmux: request pin 82 (44e10948.0) for 4a101000.mdio
+[    4.136204] pinctrl-single 44e10800.pinmux: request pin 83 (44e1094c.0) for 4a101000.mdio
+[    4.136215] pinctrl-single 44e10800.pinmux: enabling davinci_mdio_default function8
+[    4.183026] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6
+[    4.183038] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    4.183320] davinci_mdio: dt: updated phy_id[0] from phy_mask[fffffffe]
+[    4.183343] davinci_mdio: dt: updated phy_id[1] from phy_mask[fffffffe]
+[    4.188282] SMSC LAN8710/LAN8720 4a101000.mdio:00: no of_node; not parsing pinctrl DT
+[    4.188353] libphy: 4a101000.mdio: probed
+[    4.188368] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    4.189061] cpsw 4a100000.ethernet: Detected MACID = d0:ff:50:5c:fb:5f
+[    4.190310] omap_rtc 44e3e000.rtc: setting system clock to 2015-11-30 03:54:30 UTC (1448855670)
+[    4.190336] of_cfs_init
+[    4.190423] of_cfs_init: OK
+[    4.193931] PM: Hibernation image not present or could not be loaded.
+[    4.194823] Freeing unused kernel memory: 464K (c09de000 - c0a52000)
+[    4.242011] systemd-udevd[93]: starting version 215
+[    4.244385] random: systemd-udevd urandom read with 10 bits of entropy available
+[    5.083618] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    5.872243] systemd[1]: Found ordering cycle on basic.target/start
+[    5.872280] systemd[1]: Found dependency on sysinit.target/start
+[    5.872300] systemd[1]: Found dependency on console-setup.service/start
+[    5.872316] systemd[1]: Found dependency on remote-fs.target/start
+[    5.872331] systemd[1]: Found dependency on remote-fs-pre.target/start
+[    5.872346] systemd[1]: Found dependency on connman.service/start
+[    5.872360] systemd[1]: Found dependency on dbus.service/start
+[    5.872374] systemd[1]: Found dependency on basic.target/start
+[    5.872389] systemd[1]: Breaking ordering cycle by deleting job console-setup.service/start
+[    5.872407] systemd[1]: Job console-setup.service/start deleted to break ordering cycle starting with basic.target/start
+[    6.703318] systemd-udevd[175]: starting version 215
+[    6.896195] EXT4-fs (mmcblk0p2): re-mounted. Opts: errors=remount-ro
+[    7.639449] pinctrl core: add 1 pinctrl maps
+[    7.639502] pinctrl-single 44e10800.pinmux: found group selector 10 for user_leds_s0
+[    7.639520] pinctrl-single 44e10800.pinmux: request pin 21 (44e10854.0) for leds
+[    7.639531] pinctrl-single 44e10800.pinmux: request pin 22 (44e10858.0) for leds
+[    7.639540] pinctrl-single 44e10800.pinmux: request pin 23 (44e1085c.0) for leds
+[    7.639549] pinctrl-single 44e10800.pinmux: request pin 24 (44e10860.0) for leds
+[    7.639560] pinctrl-single 44e10800.pinmux: enabling user_leds_s0 function10
+[    7.642230] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/led@2[0]' - status (0)
+[    7.642507] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/led@3[0]' - status (0)
+[    7.642644] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/led@4[0]' - status (0)
+[    7.642781] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/led@5[0]' - status (0)
+[    7.928045] omap_rng 48310000.rng: OMAP Random Number Generator ver. 20
+[    8.126993] omap-sham 53100000.sham: hw accel on OMAP rev 4.3
+[    8.127021] omap-sham 53100000.sham: initialization failed.
+[    8.194153] omap-sham: probe of 53100000.sham failed with error -22
+[    8.194447] omap-aes 53500000.aes: OMAP AES hw accel rev: 3.2
+[    9.094445] net eth0: initializing cpsw version 1.12 (0)
+[    9.096822] net eth0: phy found : id is : 0x7c0f1
+[    9.096889] libphy: PHY 4a101000.mdio:01 not found
+[    9.101707] net eth0: phy 4a101000.mdio:01 not found on slave 1
+[    9.118553] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   10.214430] random: nonblocking pool is initialized
+[   11.328514] systemd-journald[157]: Received request to flush runtime journal from PID 1
+[   11.941955] using random self ethernet address
+[   11.941977] using random host ethernet address
+[   11.941990] using host ethernet address: D0:FF:50:5C:FB:61
+[   11.941998] using self ethernet address: D0:FF:50:5C:FB:50
+[   11.942016] using random self ethernet address
+[   11.942025] using random host ethernet address
+[   11.942034] using host ethernet address: D0:FF:50:5C:FB:61
+[   11.942040] using self ethernet address: D0:FF:50:5C:FB:50
+[   11.942873] usb0: HOST MAC d0:ff:50:5c:fb:61
+[   11.946261] usb0: MAC d0:ff:50:5c:fb:50
+[   12.033464] Mass Storage Function, version: 2009/09/11
+[   12.033486] LUN: removable file: (no medium)
+[   12.033647] LUN: removable file: /dev/mmcblk0p1
+[   12.033656] Number of LUNs=1
+[   12.044838] g_multi gadget: Multifunction Composite Gadget
+[   12.044858] g_multi gadget: g_multi ready
+[   13.133753] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[   13.133813] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   13.255437] 8021q: 802.1Q VLAN Support v1.8
+[   13.255507] 8021q: adding VLAN 0 to HW filter on device eth0
+[   15.544320] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[   83.678057] bone_capemgr bone_capemgr: part_number 'BB-SPICAPE-01', version 'N/A'
+[   83.678286] bone_capemgr bone_capemgr: slot #4: override
+[   83.678328] bone_capemgr bone_capemgr: Using override eeprom data at slot 4
+[   83.678370] bone_capemgr bone_capemgr: slot #4: 'Override Board Name,00A0,Override Manuf,BB-SPICAPE-01'
+[   84.864213] bone_capemgr bone_capemgr: slot #4: dtbo 'BB-SPICAPE-01-00A0.dtbo' loaded; overlay id #0
+[   85.128387] pinctrl core: add 1 pinctrl maps
+[   85.128509] pinctrl-single 44e10800.pinmux: found group selector 11 for pinmux_bb_spi0_pins
+[   85.128554] pinctrl-single 44e10800.pinmux: request pin 84 (44e10950.0) for 48030000.spi
+[   85.128587] pinctrl-single 44e10800.pinmux: request pin 85 (44e10954.0) for 48030000.spi
+[   85.128618] pinctrl-single 44e10800.pinmux: request pin 86 (44e10958.0) for 48030000.spi
+[   85.128647] pinctrl-single 44e10800.pinmux: request pin 87 (44e1095c.0) for 48030000.spi
+[   85.128680] pinctrl-single 44e10800.pinmux: enabling pinmux_bb_spi0_pins function11
+[   85.129463] omap2_mcspi 48030000.spi: registered master spi1
+[   85.147812] spi spi1.0: setup: speed 16000000, sample trailing edge, clk inverted
+[   85.147881] spi spi1.0: setup mode 3, 8 bits/w, 16000000 Hz max --> 0
+[   85.150355] omap2_mcspi 48030000.spi: registered child spi1.0
+[   85.155723] pinctrl core: add 1 pinctrl maps
+[   85.155791] pinctrl-single 44e10800.pinmux: found group selector 12 for pinmux_bb_spi1_pins
+[   85.155815] pinctrl-single 44e10800.pinmux: request pin 100 (44e10990.0) for 481a0000.spi
+[   85.155832] pinctrl-single 44e10800.pinmux: request pin 101 (44e10994.0) for 481a0000.spi
+[   85.155847] pinctrl-single 44e10800.pinmux: request pin 102 (44e10998.0) for 481a0000.spi
+[   85.155862] pinctrl-single 44e10800.pinmux: request pin 103 (44e1099c.0) for 481a0000.spi
+[   85.155878] pinctrl-single 44e10800.pinmux: request pin 89 (44e10964.0) for 481a0000.spi
+[   85.155893] pinctrl-single 44e10800.pinmux: request pin 38 (44e10898.0) for 481a0000.spi
+[   85.155910] pinctrl-single 44e10800.pinmux: enabling pinmux_bb_spi1_pins function12
+[   85.156095] of_get_named_gpiod_flags: can't parse 'cs-gpios' property of node '/ocp/spi@481a0000[0]'
+[   85.156111] of_get_named_gpiod_flags: can't parse 'cs-gpios' property of node '/ocp/spi@481a0000[1]'
+[   85.156137] of_get_named_gpiod_flags: parsed 'cs-gpios' property of node '/ocp/spi@481a0000[2]' - status (0)
+[   85.156882] omap2_mcspi 481a0000.spi: registered master spi2
+[   85.158693] spi spi2.2: not using DMA for McSPI
+[   85.158787] spi spi2.2: setup: speed 16000000, sample trailing edge, clk inverted
+[   85.158811] spi spi2.2: setup mode 3, 8 bits/w, 16000000 Hz max --> 0
+[   85.160162] omap2_mcspi 481a0000.spi: registered child spi2.2
+[   85.160361] spi spi2.1: setup: speed 16000000, sample trailing edge, clk inverted
+[   85.160383] spi spi2.1: setup mode 3, 8 bits/w, 16000000 Hz max --> 0
+[   85.166957] omap2_mcspi 481a0000.spi: registered child spi2.1
+[   85.167158] spi spi2.0: setup: speed 16000000, sample trailing edge, clk inverted
+[   85.167182] spi spi2.0: setup mode 3, 8 bits/w, 16000000 Hz max --> 0
+[   85.168497] omap2_mcspi 481a0000.spi: registered child spi2.0
+[  116.837502] spidev spi2.0: setup: speed 16000000, sample leading edge, clk normal
+[  116.837529] spidev spi2.0: setup mode 0, 8 bits/w, 16000000 Hz max --> 0
+[  116.837538] spidev spi2.0: spi mode 0
+[  116.837553] spidev spi2.0: setup: speed 16000000, sample leading edge, clk normal
+[  116.837564] spidev spi2.0: setup mode 0, 8 bits/w, 16000000 Hz max --> 0
+[  116.837572] spidev spi2.0: 8 bits per word
+[  116.837584] spidev spi2.0: setup: speed 1000000, sample leading edge, clk normal
+[  116.837594] spidev spi2.0: setup mode 0, 8 bits/w, 1000000 Hz max --> 0
+[  116.841626] spidev spi2.2: not using DMA for McSPI
+[  116.841655] gpio-68 (spi2.2): gpiod_request: status -16
+[  116.841664] spidev spi2.2: failed to request gpio
+[  116.846608] spidev spi2.2: setup mode 0, 8 bits/w, 16000000 Hz max --> -16
