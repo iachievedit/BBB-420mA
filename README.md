@@ -8,6 +8,7 @@ Companion tutorial can be found at http://dev.iachieved.it/iachievedit/adventure
 ```
 git clone git@github.com:iachievedit/BBB-420mA
 cd BBB-420mA
+git checkout linux-4.3
 ```
 
 ### Node >=0.12 Required!
@@ -25,6 +26,16 @@ Yes, I should write a ```package.json``` file.
 ```echo BB-SPICAPE-01 > /sys/devices/platform/bone_capemgr/slots```
 
 ### Examples
-```node outputMilliamp.js 8 # Output 8 mA```
+```node transmitReceive420.js 9 12```
 
+Output
+```
+----
+Output to Transmitter(/dev/spidev2.1):  1829.6875 (9 mA)
+Input from Receiver(/dev/spidev2.0):  1802 (8.9) mA
+----
+Output to Transmitter(/dev/spidev1.0):  2447.5 (12 mA)
+Input from Receiver(/dev/spidev2.2):  2462 (12) mA
+----
+```
 
